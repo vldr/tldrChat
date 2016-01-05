@@ -176,6 +176,36 @@ namespace tldr_server
                                 receivedIpEndPoint.Address.ToString(), receivedIpEndPoint.Port, "darkred");
                         }   
                     }
+                    else if (receivedTextArg[2].Contains("/pardon"))
+                    {
+                        try
+                        {
+                            if (!strAdminList.Contains(receivedIpEndPoint.Address.ToString()))
+                            {
+                                SendToSpecific(1, "[Insufficient Permissions!]" + Environment.NewLine, receivedTextArg[1],
+                                    receivedIpEndPoint.Address.ToString(), receivedIpEndPoint.Port, "darkred");
+                                goto END;
+                            }
+
+                            string strUsers = string.Join("|", strBannedList.ToArray());
+                            string[] strUsersSplit = strUsers.Split('|');
+
+                            foreach (string i in strUsersSplit)
+                            {
+                                if (i == receivedTextArg[2].Remove(0, 8))
+                                {
+                                    strBannedList.Remove(i);
+
+                                    SendToAll(1, "[" + i + " has been unbanned from the server.]" + Environment.NewLine, "darkblue");
+                                }
+                            }
+                        }
+                        catch (ArgumentOutOfRangeException)
+                        {
+                            SendToSpecific(1, "[Incorrect parameters!]" + Environment.NewLine, receivedTextArg[1],
+                                receivedIpEndPoint.Address.ToString(), receivedIpEndPoint.Port, "darkred");
+                        } 
+                    }
                     else if (receivedTextArg[2].Contains("/admin"))
                     {
                         try
@@ -204,7 +234,7 @@ namespace tldr_server
                             SendToSpecific(1, "[Incorrect parameters!]" + Environment.NewLine, receivedTextArg[1],
                                 receivedIpEndPoint.Address.ToString(), receivedIpEndPoint.Port, "darkred");
                         }
-                        
+
                     }
                     else if (receivedTextArg[2].Contains("/cls"))
                     {
@@ -226,7 +256,22 @@ namespace tldr_server
                         string strUsers = string.Join("|", strAdminList.ToArray());
                         string[] strUsersSplit = strUsers.Split('|');
 
-                        string ans = "Admins: " +   Environment.NewLine;
+                        string ans = "Admins: " + Environment.NewLine;
+
+                        foreach (string i in strUsersSplit)
+                        {
+                            ans += i + Environment.NewLine;
+                        }
+
+                        SendToSpecific(1, ans + Environment.NewLine, receivedTextArg[1],
+                                 receivedIpEndPoint.Address.ToString(), receivedIpEndPoint.Port, "darkred");
+                    }
+                    else if (receivedTextArg[2].Contains("/b"))
+                    {
+                        string strUsers = string.Join("|", strBannedList.ToArray());
+                        string[] strUsersSplit = strUsers.Split('|');
+
+                        string ans = "Banned: " + Environment.NewLine;
 
                         foreach (string i in strUsersSplit)
                         {
