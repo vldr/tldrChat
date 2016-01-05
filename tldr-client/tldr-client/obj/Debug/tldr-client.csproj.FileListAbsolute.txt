@@ -1,0 +1,15 @@
+c:\users\vladpc\documents\visual studio 2013\Projects\tldr-client\tldr-client\bin\Debug\tldr-client.exe.config
+c:\users\vladpc\documents\visual studio 2013\Projects\tldr-client\tldr-client\bin\Debug\tldr-client.exe
+c:\users\vladpc\documents\visual studio 2013\Projects\tldr-client\tldr-client\bin\Debug\tldr-client.pdb
+c:\users\vladpc\documents\visual studio 2013\Projects\tldr-client\tldr-client\obj\Debug\MainWindow.baml
+c:\users\vladpc\documents\visual studio 2013\Projects\tldr-client\tldr-client\obj\Debug\MainWindow.g.cs
+c:\users\vladpc\documents\visual studio 2013\Projects\tldr-client\tldr-client\obj\Debug\App.g.cs
+c:\users\vladpc\documents\visual studio 2013\Projects\tldr-client\tldr-client\obj\Debug\tldr-client_MarkupCompile.cache
+c:\users\vladpc\documents\visual studio 2013\Projects\tldr-client\tldr-client\obj\Debug\tldr-client.g.resources
+c:\users\vladpc\documents\visual studio 2013\Projects\tldr-client\tldr-client\obj\Debug\tldr_client.Properties.Resources.resources
+c:\users\vladpc\documents\visual studio 2013\Projects\tldr-client\tldr-client\obj\Debug\tldr-client.csproj.GenerateResource.Cache
+c:\users\vladpc\documents\visual studio 2013\Projects\tldr-client\tldr-client\obj\Debug\tldr-client.exe
+c:\users\vladpc\documents\visual studio 2013\Projects\tldr-client\tldr-client\obj\Debug\tldr-client.pdb
+C:\Users\vladpc\documents\visual studio 2013\Projects\tldr-client\tldr-client\obj\Debug\tldr-client.csprojResolveAssemblyReference.cache
+C:\Users\vladpc\documents\visual studio 2013\Projects\tldr-client\tldr-client\obj\Debug\SplashWindow.baml
+C:\Users\vladpc\documents\visual studio 2013\Projects\tldr-client\tldr-client\obj\Debug\SplashWindow.g.cs

@@ -1,0 +1,32 @@
+﻿<Window x:Class="tldr_client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="tldr chat" Height="391.982" Width="432" MinHeight="442.982" MinWidth="506" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" ResizeMode="CanResizeWithGrip" >
+    <Grid Margin="10" MouseDown="Grid_MouseDown">
+        <Grid.Effect>
+            <DropShadowEffect Opacity="0.3" ShadowDepth="0" BlurRadius="15"/>
+        </Grid.Effect>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="txtInput" TextWrapping="Wrap" SelectionOpacity="0.1"  BorderThickness="0" BorderBrush="#99D1D1D1" PreviewKeyDown="txtInput_PreviewKeyDown" Background="#FFF1F1F1" Foreground="#FF474747" Padding="3,10" FontSize="15" Margin="-1,381,0,0"/>
+        <RichTextBox x:Name="richTxtContent" Margin="97,52,0,42" BorderThickness="0" Padding="4" Block.LineHeight="1" IsReadOnly="True" TextChanged="richTxtContent_TextChanged" VerticalScrollBarVisibility="Auto">
+            <RichTextBox.Effect>
+                <DropShadowEffect Opacity="0.1" ShadowDepth="0" Direction="240"/>
+            </RichTextBox.Effect>
+            <FlowDocument/>
+        </RichTextBox>
+        <TextBox x:Name="txtOnlineUsers" Margin="-1,52,0,42" Padding="4" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" IsReadOnly="True" 
+                 Cursor="Arrow" HorizontalAlignment="Left" Width="98" BorderBrush="{x:Null}" BorderThickness="0" Foreground="#FF4F4F4F" Background="#FFF1F1F1" >
+            <TextBox.Effect>
+                <DropShadowEffect Opacity="0.1" ShadowDepth="3" Direction="190"/>
+            </TextBox.Effect>
+        </TextBox>
+        <Grid x:Name="gridHeader" Margin="-1,-1,0,0" Height="53" VerticalAlignment="Top" Background="#FFA8A5A5">
+            <Label x:Name="lblTitle" Content="TLDR Chat" HorizontalAlignment="Left" Margin="5,13,0,0" VerticalAlignment="Top" Foreground="White" Background="{x:Null}"/>
+        </Grid>
+        <Label x:Name="lblExit" Content="×" Margin="0,3,7,0" VerticalAlignment="Top" Height="43" Foreground="White" Cursor="Hand" MouseDown="lblExit_MouseDown" Background="{x:Null}" HorizontalAlignment="Right" Width="25" FontFamily="Microsoft YaHei Light" FontSize="24"/>
+        <Border x:Name="border" BorderBrush="#FFA8A5A5" BorderThickness="1" Margin="-1,-1,0,0"/>
+    </Grid>
+</Window>
+    

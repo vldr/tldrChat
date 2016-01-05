@@ -1,0 +1,6 @@
+c:\users\vladpc\documents\visual studio 2013\Projects\tldr-server\tldr-server\bin\Debug\tldr-server.exe.config
+c:\users\vladpc\documents\visual studio 2013\Projects\tldr-server\tldr-server\bin\Debug\tldr-server.exe
+c:\users\vladpc\documents\visual studio 2013\Projects\tldr-server\tldr-server\bin\Debug\tldr-server.pdb
+c:\users\vladpc\documents\visual studio 2013\Projects\tldr-server\tldr-server\obj\Debug\tldr-server.exe
+c:\users\vladpc\documents\visual studio 2013\Projects\tldr-server\tldr-server\obj\Debug\tldr-server.pdb
+c:\users\vladpc\documents\visual studio 2013\Projects\tldr-server\tldr-server\obj\Debug\tldr-server.csprojResolveAssemblyReference.cache
