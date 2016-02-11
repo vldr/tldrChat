@@ -1,0 +1,376 @@
+  Microsoft.Expression.Controls.g.resources - Embedded, ContainedInManifestFile, 
+  Microsoft.Expression.Controls.ExceptionStringTable.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly Microsoft.Expression.Controls, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35: 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35: 
+	hash=None, flags=None
+Assembly PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35: 
+	hash=None, flags=None
+Assembly PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly Microsoft.Expression.Drawing, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35: 
+	hash=None, flags=None
+Assembly System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class Microsoft.Expression.Controls.DistributionStrategy: AutoLayout, AnsiClass, Class, Abstract, BeforeFieldInit
+  Methods:
+    Initialize(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ComputeAutoCapacity(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ShouldBreak(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    OnPolylineBegin(PolylineData): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    OnPolylineCompleted(Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    OnStepCompleted(Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Distribute(PathPanel, Int32, Int32): PrivateScope, Public, Static, HideBySig
+Class Microsoft.Expression.Controls.EvenDistributionStrategy: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  :Microsoft.Expression.Controls.DistributionStrategy
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ComputeAutoCapacity(): PrivateScope, Public, Virtual, HideBySig
+    OnPolylineBegin(PolylineData): PrivateScope, Public, Virtual, HideBySig
+Class Microsoft.Expression.Controls.GeometryStrategy: AutoLayout, AnsiClass, Class, Abstract, BeforeFieldInit
+  :System.Windows.DependencyObject
+  Properties:
+    System.Collections.Generic.IList`1[Microsoft.Expression.Drawing.Core.PolylineData] Polylines 'get ' : 
+  Methods:
+    HasGeometryChanged(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Polylines(): PrivateScope, Public, HideBySig, SpecialName
+    ComputeTransforms(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Create(LayoutPath): PrivateScope, Public, Static, HideBySig
+    InvalidatePolylineCache(): PrivateScope, Public, HideBySig
+    Unhook(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class Microsoft.Expression.Controls.FrameworkElementStrategy: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  :Microsoft.Expression.Controls.GeometryStrategy
+    Void .ctor(Microsoft.Expression.Controls.LayoutPath): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    HasGeometryChanged(): PrivateScope, Public, Virtual, HideBySig
+    Unhook(): PrivateScope, Public, Virtual, HideBySig
+    ComputeTransforms(): PrivateScope, Public, Virtual, HideBySig
+Class Microsoft.Expression.Controls.ShapeStrategy: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  :Microsoft.Expression.Controls.FrameworkElementStrategy
+    Void .ctor(Microsoft.Expression.Controls.LayoutPath): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ComputeTransforms(): PrivateScope, Public, Virtual, HideBySig
+Class Microsoft.Expression.Controls.IShapeStrategy: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  :Microsoft.Expression.Controls.FrameworkElementStrategy
+    Void .ctor(Microsoft.Expression.Controls.LayoutPath): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Unhook(): PrivateScope, Public, Virtual, HideBySig
+    ComputeTransforms(): PrivateScope, Public, Virtual, HideBySig
+Class Microsoft.Expression.Controls.RectangleStrategy: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  :Microsoft.Expression.Controls.ShapeStrategy
+    Void .ctor(Microsoft.Expression.Controls.LayoutPath): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Microsoft.Expression.Controls.EllipseStrategy: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  :Microsoft.Expression.Controls.ShapeStrategy
+    Void .ctor(Microsoft.Expression.Controls.LayoutPath): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Microsoft.Expression.Controls.LineStrategy: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  :Microsoft.Expression.Controls.ShapeStrategy
+    Void .ctor(Microsoft.Expression.Controls.LayoutPath): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Microsoft.Expression.Controls.PolygonStrategy: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  :Microsoft.Expression.Controls.ShapeStrategy
+    Void .ctor(Microsoft.Expression.Controls.LayoutPath): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    HasGeometryChanged(): PrivateScope, Public, Virtual, HideBySig
+Class Microsoft.Expression.Controls.PolylineStrategy: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  :Microsoft.Expression.Controls.ShapeStrategy
+    Void .ctor(Microsoft.Expression.Controls.LayoutPath): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    HasGeometryChanged(): PrivateScope, Public, Virtual, HideBySig
+    ClonePointCollection(PointCollection): PrivateScope, Public, Static, HideBySig
+    PointCollectionsEqual(PointCollection, PointCollection): PrivateScope, Public, Static, HideBySig
+    CreatePolylinePathGeometry(PointCollection, Boolean): PrivateScope, Public, Static, HideBySig
+Class Microsoft.Expression.Controls.PathStrategy: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  :Microsoft.Expression.Controls.ShapeStrategy
+    Void .ctor(Microsoft.Expression.Controls.LayoutPath): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    HasGeometryChanged(): PrivateScope, Public, Virtual, HideBySig
+    ComputeTransforms(): PrivateScope, Public, Virtual, HideBySig
+Struct Microsoft.Expression.Controls.ChangedPathLayoutProperties: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Expression.Controls.ChangedPathLayoutProperties None = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Expression.Controls.ChangedPathLayoutProperties LayoutPathIndex = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Expression.Controls.ChangedPathLayoutProperties GlobalIndex = 2 : Public, Static, Literal, HasDefault
+    Microsoft.Expression.Controls.ChangedPathLayoutProperties LocalIndex = 4 : Public, Static, Literal, HasDefault
+    Microsoft.Expression.Controls.ChangedPathLayoutProperties GlobalOffset = 8 : Public, Static, Literal, HasDefault
+    Microsoft.Expression.Controls.ChangedPathLayoutProperties LocalOffset = 16 : Public, Static, Literal, HasDefault
+    Microsoft.Expression.Controls.ChangedPathLayoutProperties NormalAngle = 32 : Public, Static, Literal, HasDefault
+    Microsoft.Expression.Controls.ChangedPathLayoutProperties OrientationAngle = 64 : Public, Static, Literal, HasDefault
+    Microsoft.Expression.Controls.ChangedPathLayoutProperties IsArranged = 128 : Public, Static, Literal, HasDefault
+Class Microsoft.Expression.Controls.PathLayoutUpdatedEventArgs: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(Microsoft.Expression.Controls.ChangedPathLayoutProperties): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Microsoft.Expression.Controls.ChangedPathLayoutProperties ChangedProperties 'get set' : 
+  Methods:
+    get_ChangedProperties(): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Expression.Controls.PathLayoutData: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 LayoutPathIndex 'get set' : 
+    Int32 GlobalIndex 'get set' : 
+    Int32 LocalIndex 'get set' : 
+    Double GlobalOffset 'get set' : 
+    Double LocalOffset 'get set' : 
+    Double NormalAngle 'get set' : 
+    Double OrientationAngle 'get set' : 
+    Boolean IsArranged 'get set' : 
+  Methods:
+    get_LayoutPathIndex(): PrivateScope, Public, HideBySig, SpecialName
+    set_LayoutPathIndex(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_GlobalIndex(): PrivateScope, Public, HideBySig, SpecialName
+    set_GlobalIndex(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_LocalIndex(): PrivateScope, Public, HideBySig, SpecialName
+    set_LocalIndex(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_GlobalOffset(): PrivateScope, Public, HideBySig, SpecialName
+    set_GlobalOffset(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_LocalOffset(): PrivateScope, Public, HideBySig, SpecialName
+    set_LocalOffset(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_NormalAngle(): PrivateScope, Public, HideBySig, SpecialName
+    set_NormalAngle(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_OrientationAngle(): PrivateScope, Public, HideBySig, SpecialName
+    set_OrientationAngle(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_IsArranged(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsArranged(Boolean): PrivateScope, Public, HideBySig, SpecialName
+Interface Microsoft.Expression.Controls.IPathLayoutItem: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    Int32 LayoutPathIndex 'get ' : 
+    Int32 GlobalIndex 'get ' : 
+    Int32 LocalIndex 'get ' : 
+    Double GlobalOffset 'get ' : 
+    Double LocalOffset 'get ' : 
+    Double NormalAngle 'get ' : 
+    Double OrientationAngle 'get ' : 
+    Boolean IsArranged 'get ' : 
+  Events:
+    System.EventHandler`1[Microsoft.Expression.Controls.PathLayoutUpdatedEventArgs] PathLayoutUpdated: 
+  Methods:
+    add_PathLayoutUpdated(EventHandler`1): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    remove_PathLayoutUpdated(EventHandler`1): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LayoutPathIndex(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_GlobalIndex(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LocalIndex(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_GlobalOffset(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LocalOffset(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_NormalAngle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_OrientationAngle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_IsArranged(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Update(PathLayoutData): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class Microsoft.Expression.Controls.IsArrangedToScaleConverter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.Windows.Data.IValueConverter
+  Methods:
+    ConvertBack(Object, Type, Object, CultureInfo): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Convert(Object, Type, Object, CultureInfo): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Struct Microsoft.Expression.Controls.Distribution: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Expression.Controls.Distribution Even = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Expression.Controls.Distribution Padded = 1 : Public, Static, Literal, HasDefault
+Struct Microsoft.Expression.Controls.Orientation: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Expression.Controls.Orientation None = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Expression.Controls.Orientation OrientToPath = 1 : Public, Static, Literal, HasDefault
+Struct Microsoft.Expression.Controls.FillBehavior: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Expression.Controls.FillBehavior FullSpan = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Expression.Controls.FillBehavior NoOverlap = 1 : Public, Static, Literal, HasDefault
+Class Microsoft.Expression.Controls.LayoutPath: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Windows.Media.Animation.Animatable
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.DependencyProperty SourceElementProperty : Public, Static, InitOnly
+    System.Windows.DependencyProperty DistributionProperty : Public, Static, InitOnly
+    System.Windows.DependencyProperty CapacityProperty : Public, Static, InitOnly
+    System.Windows.DependencyProperty PaddingProperty : Public, Static, InitOnly
+    System.Windows.DependencyProperty OrientationProperty : Public, Static, InitOnly
+    System.Windows.DependencyProperty StartProperty : Public, Static, InitOnly
+    System.Windows.DependencyProperty SpanProperty : Public, Static, InitOnly
+    System.Windows.DependencyProperty FillBehaviorProperty : Public, Static, InitOnly
+  Properties:
+    System.Windows.FrameworkElement SourceElement 'get set' : 
+    Microsoft.Expression.Controls.Distribution Distribution 'get set' : 
+    Double Capacity 'get set' : 
+    Double Padding 'get set' : 
+    Microsoft.Expression.Controls.Orientation Orientation 'get set' : 
+    Double Start 'get set' : 
+    Double Span 'get set' : 
+    Microsoft.Expression.Controls.FillBehavior FillBehavior 'get set' : 
+    Double ActualCapacity 'get set' : 
+    Boolean IsValid 'get ' : 
+    Boolean IsLayoutDirty 'get set' : 
+    Boolean IsRenderDirty 'get set' : 
+    System.Collections.Generic.IList`1[Microsoft.Expression.Drawing.Core.PolylineData] Polylines 'get ' : 
+    Double TotalLength 'get ' : 
+    Boolean IsAttached 'get ' : 
+  Methods:
+    get_SourceElement(): PrivateScope, Public, HideBySig, SpecialName
+    set_SourceElement(FrameworkElement): PrivateScope, Public, HideBySig, SpecialName
+    get_Distribution(): PrivateScope, Public, HideBySig, SpecialName
+    set_Distribution(Distribution): PrivateScope, Public, HideBySig, SpecialName
+    get_Capacity(): PrivateScope, Public, HideBySig, SpecialName
+    set_Capacity(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Padding(): PrivateScope, Public, HideBySig, SpecialName
+    set_Padding(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Orientation(): PrivateScope, Public, HideBySig, SpecialName
+    set_Orientation(Orientation): PrivateScope, Public, HideBySig, SpecialName
+    get_Start(): PrivateScope, Public, HideBySig, SpecialName
+    set_Start(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Span(): PrivateScope, Public, HideBySig, SpecialName
+    set_Span(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_FillBehavior(): PrivateScope, Public, HideBySig, SpecialName
+    set_FillBehavior(FillBehavior): PrivateScope, Public, HideBySig, SpecialName
+    get_ActualCapacity(): PrivateScope, Public, HideBySig, SpecialName
+    set_ActualCapacity(Double): PrivateScope, Assembly, HideBySig, SpecialName
+    get_IsValid(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsLayoutDirty(): PrivateScope, Assembly, HideBySig, SpecialName
+    set_IsLayoutDirty(Boolean): PrivateScope, Assembly, HideBySig, SpecialName
+    get_IsRenderDirty(): PrivateScope, Assembly, HideBySig, SpecialName
+    set_IsRenderDirty(Boolean): PrivateScope, Assembly, HideBySig, SpecialName
+    get_Polylines(): PrivateScope, Assembly, HideBySig, SpecialName
+    get_TotalLength(): PrivateScope, Assembly, HideBySig, SpecialName
+    CheckLayoutState(): PrivateScope, Assembly, HideBySig
+    CheckRenderState(): PrivateScope, Assembly, HideBySig
+    Attach(PathPanel): PrivateScope, Assembly, HideBySig
+    get_IsAttached(): PrivateScope, Assembly, HideBySig, SpecialName
+    Detach(): PrivateScope, Assembly, HideBySig
+    UpdateCache(): PrivateScope, Assembly, HideBySig
+    Distribute(Int32, Int32): PrivateScope, Assembly, HideBySig
+    GetLengthTo(PolylineData, MarchLocation): PrivateScope, Assembly, HideBySig
+Class Microsoft.Expression.Controls.LayoutPathCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.FreezableCollection`1[Microsoft.Expression.Controls.LayoutPath]
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Microsoft.Expression.Controls.LayoutPathCapacityConverter: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.ComponentModel.TypeConverter
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    CanConvertFrom(ITypeDescriptorContext, Type): PrivateScope, Public, Virtual, HideBySig
+    ConvertFrom(ITypeDescriptorContext, CultureInfo, Object): PrivateScope, Public, Virtual, HideBySig
+    ConvertTo(ITypeDescriptorContext, CultureInfo, Object, Type): PrivateScope, Public, Virtual, HideBySig
+Class Microsoft.Expression.Controls.PaddedDistributionStrategy: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  :Microsoft.Expression.Controls.DistributionStrategy
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ComputeAutoCapacity(): PrivateScope, Public, Virtual, HideBySig
+    Initialize(): PrivateScope, Public, Virtual, HideBySig
+    OnPolylineBegin(PolylineData): PrivateScope, Public, Virtual, HideBySig
+    ShouldBreak(Int32): PrivateScope, Public, Virtual, HideBySig
+    OnPolylineCompleted(Double): PrivateScope, Public, Virtual, HideBySig
+    OnStepCompleted(Double): PrivateScope, Public, Virtual, HideBySig
+Class Microsoft.Expression.Controls.PathListBox: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Windows.Controls.ListBox
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.DependencyProperty LayoutPathsProperty : Public, Static, InitOnly
+    System.Windows.DependencyProperty StartItemIndexProperty : Public, Static, InitOnly
+    System.Windows.DependencyProperty WrapItemsProperty : Public, Static, InitOnly
+  Properties:
+    Microsoft.Expression.Controls.LayoutPathCollection LayoutPaths 'get ' : 
+    Double StartItemIndex 'get set' : 
+    Boolean WrapItems 'get set' : 
+  Methods:
+    get_LayoutPaths(): PrivateScope, Public, HideBySig, SpecialName
+    get_StartItemIndex(): PrivateScope, Public, HideBySig, SpecialName
+    set_StartItemIndex(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_WrapItems(): PrivateScope, Public, HideBySig, SpecialName
+    set_WrapItems(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    OnApplyTemplate(): PrivateScope, Public, Virtual, HideBySig
+Class Microsoft.Expression.Controls.PathListBoxItem: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Windows.Controls.ListBoxItem
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    Microsoft.Expression.Controls.IPathLayoutItem
+  Fields:
+    System.Windows.DependencyProperty LayoutPathIndexProperty : Public, Static, InitOnly
+    System.Windows.DependencyProperty GlobalIndexProperty : Public, Static, InitOnly
+    System.Windows.DependencyProperty LocalIndexProperty : Public, Static, InitOnly
+    System.Windows.DependencyProperty GlobalOffsetProperty : Public, Static, InitOnly
+    System.Windows.DependencyProperty LocalOffsetProperty : Public, Static, InitOnly
+    System.Windows.DependencyProperty NormalAngleProperty : Public, Static, InitOnly
+    System.Windows.DependencyProperty OrientationAngleProperty : Public, Static, InitOnly
+    System.Windows.DependencyProperty IsArrangedProperty : Public, Static, InitOnly
+  Properties:
+    Int32 LayoutPathIndex 'get set' : 
+    Int32 GlobalIndex 'get set' : 
+    Int32 LocalIndex 'get set' : 
+    Double GlobalOffset 'get set' : 
+    Double LocalOffset 'get set' : 
+    Double NormalAngle 'get set' : 
+    Double OrientationAngle 'get set' : 
+    Boolean IsArranged 'get set' : 
+  Events:
+    System.EventHandler`1[Microsoft.Expression.Controls.PathLayoutUpdatedEventArgs] PathLayoutUpdated: 
+  Methods:
+    add_PathLayoutUpdated(EventHandler`1): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    remove_PathLayoutUpdated(EventHandler`1): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_LayoutPathIndex(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_LayoutPathIndex(Int32): PrivateScope, Assembly, HideBySig, SpecialName
+    get_GlobalIndex(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_GlobalIndex(Int32): PrivateScope, Assembly, HideBySig, SpecialName
+    get_LocalIndex(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_LocalIndex(Int32): PrivateScope, Assembly, HideBySig, SpecialName
+    get_GlobalOffset(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_GlobalOffset(Double): PrivateScope, Assembly, HideBySig, SpecialName
+    get_LocalOffset(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_LocalOffset(Double): PrivateScope, Assembly, HideBySig, SpecialName
+    get_NormalAngle(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_NormalAngle(Double): PrivateScope, Assembly, HideBySig, SpecialName
+    get_OrientationAngle(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_OrientationAngle(Double): PrivateScope, Assembly, HideBySig, SpecialName
+    get_IsArranged(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_IsArranged(Boolean): PrivateScope, Assembly, HideBySig, SpecialName
+    Update(PathLayoutData): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    OnPathLayoutUpdated(PathLayoutUpdatedEventArgs): PrivateScope, Assembly, HideBySig
+Class Microsoft.Expression.Controls.PathPanel: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Windows.Controls.Panel
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.DependencyProperty LayoutPathsProperty : Public, Static, InitOnly
+    System.Windows.DependencyProperty StartItemIndexProperty : Public, Static, InitOnly
+    System.Windows.DependencyProperty WrapItemsProperty : Public, Static, InitOnly
+  Properties:
+    Microsoft.Expression.Controls.LayoutPathCollection LayoutPaths 'get set' : 
+    Double StartItemIndex 'get set' : 
+    Boolean WrapItems 'get set' : 
+    System.Collections.Generic.IList`1[Microsoft.Expression.Controls.LayoutPath] ValidPaths 'get set' : 
+    Int32 Count 'get ' : 
+  Methods:
+    get_LayoutPaths(): PrivateScope, Public, HideBySig, SpecialName
+    set_LayoutPaths(LayoutPathCollection): PrivateScope, Public, HideBySig, SpecialName
+    get_StartItemIndex(): PrivateScope, Public, HideBySig, SpecialName
+    set_StartItemIndex(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_WrapItems(): PrivateScope, Public, HideBySig, SpecialName
+    set_WrapItems(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ValidPaths(): PrivateScope, Assembly, HideBySig, SpecialName
+    get_Count(): PrivateScope, Assembly, HideBySig, SpecialName
+    ArrangeChild(Int32, Int32, PolylineData, MarchLocation, Int32): PrivateScope, Assembly, HideBySig
+    GetChildRadius(Int32): PrivateScope, Assembly, HideBySig
+Class Microsoft.Expression.Controls.Utilities: AutoLayout, AnsiClass, Class, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    GetItemsHost(ItemsControl): PrivateScope, Public, Static, HideBySig
+    TraverseBreadthFirst(T, Func`2, Func`2): PrivateScope, Assembly, Static, HideBySig
+    GetVisualChildren(DependencyObject): PrivateScope, Public, Static, HideBySig
+    GetLogicalChildren(FrameworkElement): PrivateScope, Assembly, Static, HideBySig
+    GetLogicalDescendents(FrameworkElement): PrivateScope, Assembly, Static, HideBySig
+Class Microsoft.Expression.Controls.ExceptionStringTable: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Resources.ResourceManager ResourceManager 'get ' : 
+    System.Globalization.CultureInfo Culture 'get set' : 
+  Methods:
+    get_ResourceManager(): PrivateScope, Assembly, Static, HideBySig, SpecialName
+    get_Culture(): PrivateScope, Assembly, Static, HideBySig, SpecialName
+    set_Culture(CultureInfo): PrivateScope, Assembly, Static, HideBySig, SpecialName
